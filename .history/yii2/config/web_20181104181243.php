@@ -3,9 +3,6 @@
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
-
-$baseUrl = str_replace('/web', '', (new \yii\web\Request)->getBaseUrl());
-
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
