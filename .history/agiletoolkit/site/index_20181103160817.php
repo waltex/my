@@ -18,7 +18,6 @@ $t->addTab('tets', function ($tab) {
     $sel = $g->addSelection();
 
 
-    
 
     $b2 = $g->menu->addItem('deleted row');
     $b2->on('click', function ($j, $arg1) use ($sel, $g, $tab) {
