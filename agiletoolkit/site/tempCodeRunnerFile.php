@@ -1,0 +1,2 @@
+<?php
+$row = $sel->jsChecked();
