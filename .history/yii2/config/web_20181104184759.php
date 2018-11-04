@@ -8,10 +8,10 @@ $baseUrl = str_replace('/web', '', (new \yii\web\Request)->getBaseUrl());
 
 $config = [
         // set target language to be Russian
-        'language' => 'it-IT',
+        'language' => 'ru-RU',
     
         // set source language to be English
-        'sourceLanguage' => 'it-IT',
+        'sourceLanguage' => 'en-US',
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],

@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Crud1;
-use yii\data\ActiveDataProvider;
+use app\models\Crud1Search;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,11 +35,11 @@ class Crud1Controller extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
-            'query' => Crud1::find(),
-        ]);
+        $searchModel = new Crud1Search();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
